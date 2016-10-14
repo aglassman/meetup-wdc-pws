@@ -1,0 +1,22 @@
+.trending-list-item-container {
+    margin: 15px;
+    padding: 15px;
+    text-align: left;
+    height: 150px;
+    background-color: #f8f8f8;
+    border: 1px solid #f1f1f1;
+}
+
+.trending-list-item-container:first-child {
+    margin-top: 50px;
+}
+
+.trending-list-item-container .container-header {
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.trending-list-item-container .container-description {
+    font-size: 14px;
+}
