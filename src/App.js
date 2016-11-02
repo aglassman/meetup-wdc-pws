@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { retrieveAuctions } from './actions/auctions';
 import Trending from './components/Trending';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.retrieveAuctions();
+  }
+
   render() {
-    const { auctions } = this.props;
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
         <div className="trending-list container">
-          <Trending auctions={auctions} />
+          <Trending auctions={this.props.auctions} />
         </div>
       </div>
     );
@@ -28,5 +28,12 @@ const mapStateToProps = (state) => {
   }
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    retrieveAuctions: () => {
+      dispatch(retrieveAuctions());
+    }
+  }
+};
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
