@@ -11,7 +11,7 @@ export const retrieveAuctions = () => {
       }
     });
 
-    return fetch('/auctions')
+    return fetch('/api/auctions')
       .then(parseJSON)
       .then((json) => dispatch({ type: 'GET_AUCTIONS_FINISHED', json}));
   }
