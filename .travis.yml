@@ -1,0 +1,15 @@
+install:
+  - npm install
+script:
+  - npm build
+deploy:
+  provider: cloudfoundry
+  api: api.run.pivotal.io
+  username: jonathan.kupcho@gmail.com
+  password:
+    secure: XEH/UiJBHtph4oJax2yWIM2NAk3ZFNnUzKkaid4K3sPJr5HdzG4MHoM6wq3dEGXey7aB3HYlgCOU6ocu52xcQDUgt4DGlkyxOn8QbFx8oN5lF8lscwaju6+rFpPSwH1LXuF0r9UAgXF59qP7j16VF2EhmQ67D6O+7phzitUNqRAfgeBKNRuutsfALuugmgnwZx+njraAIt0vlZN008Yh77NVN5p/Hj2tO+hGep0Zm+Z+Ew2IOVcJ8TX8OUgBL4hlFx4UJ/LXLuEc1J9jI/ieWBYhLOxbqmQiMTKA323436zuxO0oEofnzkcj+hB94imogjJZpvl9C2T6HVxhNCJrDaWX0IOHNB3YwlPBZgI012Ze3z88RsE/LXAXaJDJ8JX+1ND7xYOx+kK0RZuQ/xoHIOQdi+4mz9Zo5j/2pWSydfgKJI9K1ENISiSPt1E/Okoe092pJLtIq1mZxP0HujD7/KE5FUrvwXLhPxmHxXmlbMpbqPDJ8hTNsMKIwCPofRThGby9hGr7uw0Wpi5cK4csO/49sWAJp9koEzAxMSMpc/nvRPvvALQy8WUIXXDZ/V98sPcVjW2Dl0fgcvwwEcwlt6W42j0woA4Aw8KI546bgGANS+d40fIxfejZjBxgaaftdC6ycC08zmTEb2F848Pk3zaGUjaUKAmjOl7IYRLqhy4=
+  organization: MJU-Org
+  space: development
+  on:
+    repo: GreaterMKEMeetup/snap-bid-site
+  edge: true
