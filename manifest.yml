@@ -1,4 +1,4 @@
 ---
 applications:
-- name: snap-bid-site
+- name: snap-bid-web
   memory: 256m
