@@ -1,0 +1,5 @@
+---
+applications:
+- name: snap-bid-site
+  memory: 256m
+  host: snap-bid-site
