@@ -6,7 +6,7 @@ export default ({auctions}) => {
   if (!auctions.isFetching) {
     content = auctions.list.map((auction) => {
       return (
-        <TrendingListItem key={auction.id} auction={auction}/>
+        <TrendingListItem key={auction.id} auction={auction} />
       )
     });
   }
