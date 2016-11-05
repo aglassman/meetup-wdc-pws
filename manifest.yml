@@ -1,4 +1,7 @@
 ---
 applications:
-- name: snap-bid-web
+- name: tableau-meetup-wdc
+  buildpack: staticfile_buildpack
   memory: 256m
+  env:
+    FORCE_HTTPS: true
